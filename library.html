@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Library — AISolutionsOS</title>
+  <meta name="description" content="A searchable catalog of battle-tested AI assets — prompts, MCP servers, skills, CLIs, automations, templates, and checklists. Filter by type, difficulty, and price." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div id="site-nav"></div>
+
+  <main>
+    <header class="page-hero" data-intro>
+      <div class="container">
+        <span class="page-eyebrow reveal-fade">AI Asset Library</span>
+        <h1 class="page-title reveal-fade">The <span class="gradient-text">AI Asset Library</span></h1>
+        <p class="page-lead reveal-fade">A searchable catalog of battle-tested prompts, MCP servers, skills, CLIs, automations, and templates. Filter by type, difficulty, and price — then copy or save what you need.</p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="toolbar">
+          <div class="search-box">
+            <span class="search-icon" id="lib-search-icon"></span>
+            <input
+              type="text"
+              class="search-input"
+              id="lib-search"
+              placeholder="Search assets by name, description, or type…"
+              autocomplete="off"
+              aria-label="Search assets"
+            />
+          </div>
+
+          <div class="filter-row">
+            <div class="filter-group" data-filter-group="type">
+              <span class="filter-label">Type</span>
+              <button class="filter-pill active" data-value="all">All</button>
+              <button class="filter-pill" data-value="prompt">Prompts</button>
+              <button class="filter-pill" data-value="mcp">MCP</button>
+              <button class="filter-pill" data-value="skill">Skills</button>
+              <button class="filter-pill" data-value="cli">CLIs</button>
+              <button class="filter-pill" data-value="automation">Automations</button>
+              <button class="filter-pill" data-value="template">Templates</button>
+              <button class="filter-pill" data-value="checklist">Checklists</button>
+            </div>
+          </div>
+
+          <div class="filter-row">
+            <div class="filter-group" data-filter-group="difficulty">
+              <span class="filter-label">Difficulty</span>
+              <button class="filter-pill active" data-value="all">All</button>
+              <button class="filter-pill" data-value="beginner">Beginner</button>
+              <button class="filter-pill" data-value="intermediate">Intermediate</button>
+              <button class="filter-pill" data-value="advanced">Advanced</button>
+            </div>
+
+            <div class="filter-group" data-filter-group="price">
+              <span class="filter-label">Price</span>
+              <button class="filter-pill active" data-value="all">All</button>
+              <button class="filter-pill" data-value="free">Free</button>
+              <button class="filter-pill" data-value="paid">Paid</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="result-count" id="lib-result-count">Showing 0 assets</p>
+
+        <div class="library-grid cols-3" id="lib-grid"></div>
+
+        <div class="empty-state" id="lib-empty" style="display: none;">
+          <h3>No assets match your filters</h3>
+          <p>Try clearing the search or resetting a filter to see more results.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-band reveal-fade">
+          <h2>Can't find what you need?</h2>
+          <p>Submit a workflow you use every day and we'll help package it into a reusable asset for the library.</p>
+          <div class="hero-ctas">
+            <a href="submit.html" class="btn-primary btn-lg">Submit a Workflow →</a>
+            <a href="build-studio.html" class="btn-outline btn-lg">Open Build Studio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="data.js"></script>
+  <script src="shared.js"></script>
+  <script src="library.js"></script>
+</body>
+</html>
