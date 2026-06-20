@@ -37,6 +37,7 @@
 
   var FILTERS = [
     { key: 'all', label: 'All' },
+    { key: 'news', label: 'News' },
     { key: 'build-log', label: 'Build Log' },
     { key: 'tutorial', label: 'Tutorial' },
     { key: 'deep-dive', label: 'Deep Dive' },
