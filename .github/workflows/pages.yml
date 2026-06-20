@@ -26,6 +26,8 @@ jobs:
         with:
           ref: claude/aiso-landing-page-prototype-xfz32f
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
