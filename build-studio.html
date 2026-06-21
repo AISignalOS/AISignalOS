@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build Studio — AISolutionsOS</title>
+  <meta name="description" content="Your personal Build Studio — saved assets, tool ideas, submissions, and the build pipeline, all stored locally in your browser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div id="site-nav"></div>
+
+  <main>
+    <header class="page-hero" data-intro>
+      <div class="container">
+        <span class="page-eyebrow reveal-fade">Build Studio</span>
+        <h1 class="page-title reveal-fade">Your <span class="gradient-text">Build Studio</span></h1>
+        <p class="page-lead reveal-fade">Your saved assets, ideas, and pipeline — stored locally in your browser. Nothing here leaves your device.</p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="studio-stat-row">
+          <div class="studio-stat">
+            <div class="s-num" id="stat-assets">0</div>
+            <div class="s-label">Saved Assets</div>
+          </div>
+          <div class="studio-stat">
+            <div class="s-num" id="stat-ideas">0</div>
+            <div class="s-label">Tool Ideas</div>
+          </div>
+          <div class="studio-stat">
+            <div class="s-num" id="stat-submissions">0</div>
+            <div class="s-label">Submissions</div>
+          </div>
+          <div class="studio-stat">
+            <div class="s-num" id="stat-cart">0</div>
+            <div class="s-label">Cart Items</div>
+          </div>
+        </div>
+
+        <div class="studio-tabs" role="tablist">
+          <button class="studio-tab active" data-tab="assets" role="tab">Saved Assets</button>
+          <button class="studio-tab" data-tab="ideas" role="tab">Tool Ideas</button>
+          <button class="studio-tab" data-tab="pipeline" role="tab">Pipeline</button>
+        </div>
+
+        <!-- Saved Assets -->
+        <div class="studio-panel active" data-panel="assets">
+          <div id="assets-content"></div>
+        </div>
+
+        <!-- Tool Ideas -->
+        <div class="studio-panel" data-panel="ideas">
+          <form class="form-card" id="idea-form" style="max-width: 680px; margin-bottom: var(--space-2xl);">
+            <div class="form-field" style="margin-bottom: var(--space-md);">
+              <label for="idea-input">Capture a tool idea</label>
+              <input class="input" type="text" id="idea-input" placeholder="e.g. A CLI that turns my changelog into release notes" autocomplete="off" />
+            </div>
+            <button type="submit" class="btn-primary">Add idea</button>
+          </form>
+          <div id="ideas-content"></div>
+        </div>
+
+        <!-- Pipeline -->
+        <div class="studio-panel" data-panel="pipeline">
+          <p class="section-subtitle" style="margin: 0 0 var(--space-2xl);">Every asset moves through five stages. Use this as a mental map for what to build next.</p>
+          <div class="studio-grid">
+            <div class="path-card">
+              <div class="path-num">1</div>
+              <h3 class="path-title">Input</h3>
+              <p class="path-desc">A raw, repeated task — the messy thing you keep doing by hand.</p>
+            </div>
+            <div class="path-card color-purple">
+              <div class="path-num">2</div>
+              <h3 class="path-title">System</h3>
+              <p class="path-desc">The task written down as clear, repeatable steps anyone could follow.</p>
+            </div>
+            <div class="path-card color-cyan">
+              <div class="path-num">3</div>
+              <h3 class="path-title">Asset</h3>
+              <p class="path-desc">The system distilled into a reusable prompt, skill, MCP server, or template.</p>
+            </div>
+            <div class="path-card">
+              <div class="path-num">4</div>
+              <h3 class="path-title">Tool</h3>
+              <p class="path-desc">The asset wrapped in an interface so anyone can run it without the internals.</p>
+            </div>
+            <div class="path-card color-purple">
+              <div class="path-num">5</div>
+              <h3 class="path-title">Product</h3>
+              <p class="path-desc">A tool that solves an expensive, repeated problem — packaged, priced, shipped.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="data.js"></script>
+  <script src="shared.js"></script>
+  <script src="build-studio.js"></script>
+</body>
+</html>

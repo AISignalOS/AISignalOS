@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — AISolutionsOS</title>
+  <meta name="description" content="Why AISolutionsOS exists: turning AI chaos into reusable systems for solopreneurs, built in public around the Input → System → Asset → Tool → Product pipeline." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div id="site-nav"></div>
+
+  <main>
+    <header class="page-hero" data-intro>
+      <div class="container">
+        <span class="page-eyebrow reveal-fade">About</span>
+        <h1 class="page-title reveal-fade">Why <span class="gradient-text">AISolutionsOS</span> exists</h1>
+        <p class="page-lead reveal-fade">AI moves fast and leaves a mess. AISolutionsOS turns that chaos into reusable systems for solopreneurs — built in public, one asset at a time.</p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="about-prose prose reveal-fade">
+          <p>Most people use AI the way you'd use a slot machine: pull the lever, hope for something good, lose the prompt that actually worked. The output disappears into a chat history you'll never scroll back to. Nothing compounds.</p>
+          <p>AISolutionsOS is the opposite bet. Every good prompt, every working MCP server, every automation that finally clicked — it gets captured, tested, organized, and turned into something you can reuse, share, or sell. The goal is leverage, not novelty.</p>
+          <p>This is built in public on purpose. The library, the tools, the build logs, the changelog — they're all open so you can see the messy middle, not just the polished result. When something breaks or gets retested, you see that too.</p>
+          <p>Underneath it all is one repeatable pipeline. Everything here is some stage of it: a raw <strong>Input</strong> becomes a documented <strong>System</strong>, which gets distilled into a reusable <strong>Asset</strong>, which can be wrapped into a <strong>Tool</strong>, which — when it solves an expensive, repeated problem — becomes a <strong>Product</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tinted">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Principles</span>
+          <h2 class="section-title">What we optimize for</h2>
+        </div>
+        <div class="values-grid">
+          <div class="value-card reveal-card">
+            <h3>Organized over endless</h3>
+            <p>A tagged, searchable system beats an infinite scroll of clever one-offs. If you can't find it again, it didn't happen.</p>
+          </div>
+          <div class="value-card reveal-card">
+            <h3>Honest over hyped</h3>
+            <p>We mark what's tested, what's draft, and what broke. No magic claims — just assets that actually run, with the caveats included.</p>
+          </div>
+          <div class="value-card reveal-card">
+            <h3>Reusable over one-off</h3>
+            <p>If a workflow is worth doing twice, it's worth turning into an asset. Reuse is where the time savings — and the products — come from.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">The Pipeline</span>
+          <h2 class="section-title">Input → System → Asset → Tool → Product</h2>
+          <p class="section-subtitle">Every piece of this site lives somewhere on this path. It's how a messy idea becomes something that compounds.</p>
+        </div>
+        <div class="paths-grid">
+          <div class="path-card reveal-card">
+            <div class="path-num">1</div>
+            <h3 class="path-title">Input</h3>
+            <p class="path-desc">A raw, repeated, often messy task — the prompt you keep retyping, the process living only in your head.</p>
+            <span class="path-steps">Capture it</span>
+          </div>
+          <div class="path-card color-purple reveal-card">
+            <div class="path-num">2</div>
+            <h3 class="path-title">System</h3>
+            <p class="path-desc">The input written down as clear, repeatable steps — documented well enough that someone (or an agent) could follow it.</p>
+            <span class="path-steps">Document it</span>
+          </div>
+          <div class="path-card color-cyan reveal-card">
+            <div class="path-num">3</div>
+            <h3 class="path-title">Asset</h3>
+            <p class="path-desc">The system distilled into a reusable artifact: a prompt, skill, MCP server, CLI, template, or automation.</p>
+            <span class="path-steps">Distill it</span>
+          </div>
+          <div class="path-card reveal-card">
+            <div class="path-num">4</div>
+            <h3 class="path-title">Tool</h3>
+            <p class="path-desc">The asset wrapped in an interface so anyone can run it without knowing the internals.</p>
+            <span class="path-steps">Wrap it</span>
+          </div>
+          <div class="path-card color-purple reveal-card">
+            <div class="path-num">5</div>
+            <h3 class="path-title">Product</h3>
+            <p class="path-desc">A tool that solves an expensive, repeated problem for someone else — packaged, priced, and shipped.</p>
+            <span class="path-steps">Ship it</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tinted">
+      <div class="container">
+        <div class="cta-band reveal-fade">
+          <h2>Start building your own system</h2>
+          <p>Browse the free library, or send us a messy workflow and we'll help turn it into a reusable asset.</p>
+          <div class="hero-ctas">
+            <a href="library.html" class="btn-primary btn-lg">Explore the Library →</a>
+            <a href="submit.html" class="btn-outline btn-lg">Submit a Workflow</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="data.js"></script>
+  <script src="shared.js"></script>
+</body>
+</html>
