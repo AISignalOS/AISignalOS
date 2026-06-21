@@ -1,0 +1,45 @@
+[
+  {
+    "id": "exp-001",
+    "projectId": "demo-project-001",
+    "name": "Defer non-critical scripts",
+    "description": "Add defer to analytics and chat widget scripts",
+    "category": "JavaScript",
+    "hypothesis": "Deferring JS will reduce TBT and improve performance score significantly",
+    "status": "keep",
+    "createdAt": "2026-06-21T10:19:53.328Z",
+    "resultSummary": "TBT reduced from 680ms to 210ms. Score +8 points."
+  },
+  {
+    "id": "exp-002",
+    "projectId": "demo-project-001",
+    "name": "Convert hero image to WebP",
+    "description": "Replace 480KB PNG hero with 89KB WebP",
+    "category": "Images",
+    "hypothesis": "WebP reduces image payload by ~80%, improving LCP directly",
+    "status": "keep",
+    "createdAt": "2026-06-21T11:19:53.328Z",
+    "resultSummary": "LCP improved from 4.2s to 2.8s. Score +12 points."
+  },
+  {
+    "id": "exp-003",
+    "projectId": "demo-project-001",
+    "name": "Add backdrop-filter blur to nav",
+    "description": "Apply CSS backdrop-filter: blur(12px) to sticky nav",
+    "category": "CSS",
+    "hypothesis": "Blur filter will create a modern look with minimal performance impact",
+    "status": "discard",
+    "createdAt": "2026-06-21T11:49:53.328Z",
+    "resultSummary": "Performance score dropped -4. backdrop-filter triggers GPU compositing."
+  },
+  {
+    "id": "exp-004",
+    "projectId": "demo-project-001",
+    "name": "Preload hero image",
+    "description": "Add <link rel=\"preload\"> for the LCP hero image",
+    "category": "Images",
+    "hypothesis": "Preloading hero will directly improve LCP timing",
+    "status": "pending",
+    "createdAt": "2026-06-21T12:49:53.328Z"
+  }
+]

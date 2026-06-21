@@ -1,0 +1,11 @@
+[
+  {
+    "id": "demo-project-001",
+    "name": "My Company Website",
+    "url": "https://example.com",
+    "createdAt": "2026-06-21T09:19:53.328Z",
+    "updatedAt": "2026-06-21T13:14:53.328Z",
+    "notes": "Main marketing site. Priority: LCP improvement.",
+    "deviceMode": "mobile"
+  }
+]
