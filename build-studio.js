@@ -14,7 +14,9 @@
     assets: 'aiso_saved_assets',
     ideas: 'aiso_ideas',
     submissions: 'aiso_submissions',
-    cart: 'aiso_cart'
+    cart: 'aiso_cart',
+    workflows: 'aiso-workflows',
+    checklist: 'aiso-build-checklist'
   };
 
   /* ─── Storage helpers ─────────────────────────────────── */
@@ -32,6 +34,23 @@
   function writeArray(key, arr) {
     try {
       localStorage.setItem(key, JSON.stringify(arr));
+    } catch (e) { /* ignore */ }
+  }
+
+  function readObject(key) {
+    try {
+      var raw = localStorage.getItem(key);
+      if (!raw) return {};
+      var parsed = JSON.parse(raw);
+      return typeof parsed === 'object' && parsed !== null ? parsed : {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function writeObject(key, obj) {
+    try {
+      localStorage.setItem(key, JSON.stringify(obj));
     } catch (e) { /* ignore */ }
   }
 

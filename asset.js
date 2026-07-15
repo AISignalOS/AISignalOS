@@ -45,6 +45,14 @@
     return compat.map(function (c) { return COMPAT_NAME[c] || c; }).join(', ');
   }
 
+  var STATUS_LABEL = { idea: 'Idea', draft: 'Draft', tested: 'Tested', published: 'Published', paid: 'Paid' };
+  var LICENSE_LABEL = { personal: 'Personal use', commercial: 'Commercial use OK' };
+
+  function capitalize(str) {
+    var s = String(str == null ? '' : str);
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
   /* ── localStorage save helpers ── */
   function getSaved() {
     try {
@@ -120,6 +128,71 @@
       '<div class="library-grid cols-3" style="margin-bottom: 0;">' + cards + '</div></div>';
   }
 
+  function tqFact(label, valueHtml) {
+    return '<div class="tq-fact"><span class="tq-label">' + esc(label) + '</span>' +
+      '<span class="tq-value">' + valueHtml + '</span></div>';
+  }
+
+  function ratingDotsHtml(rating) {
+    var n = Math.round(Number(rating));
+    if (isNaN(n)) return '';
+    if (n < 0) n = 0;
+    if (n > 5) n = 5;
+    var dots = '';
+    for (var i = 1; i <= 5; i++) {
+      dots += '<span class="tq-dot' + (i <= n ? ' filled' : '') + '" aria-hidden="true"></span>';
+    }
+    return '<span class="tq-dots" role="img" aria-label="' + esc(rating + ' out of 5') + '">' + dots + '</span>';
+  }
+
+  function trustQualityHtml(asset) {
+    var rows = [];
+
+    if (asset.status != null) {
+      var statusLabel = STATUS_LABEL[asset.status] || capitalize(asset.status);
+      rows.push(tqFact('Tested status',
+        '<span class="tq-pill tq-status-' + esc(asset.status) + '">' + esc(statusLabel) + '</span>'));
+    }
+    if (asset.updated) {
+      rows.push(tqFact('Last updated', esc(formatDate(asset.updated))));
+    }
+    if (asset.version) {
+      rows.push(tqFact('Version', esc(asset.version)));
+    }
+    if (asset.compat && asset.compat.length) {
+      var tags = asset.compat.map(function (c) {
+        return '<span class="tq-tag">' + esc(COMPAT_NAME[c] || c) + '</span>';
+      }).join('');
+      rows.push(tqFact('Works with', '<span class="tq-tags">' + tags + '</span>'));
+    }
+    if (asset.requires != null && asset.requires !== '') {
+      rows.push(tqFact('Requires', esc(asset.requires)));
+    }
+    if (asset.risk) {
+      rows.push(tqFact('Risk level',
+        '<span class="tq-pill tq-risk-' + esc(asset.risk) + '">' + esc(capitalize(asset.risk)) + '</span>'));
+    }
+    if (asset.setupDifficulty) {
+      rows.push(tqFact('Setup difficulty', esc(capitalize(asset.setupDifficulty))));
+    }
+    if (asset.timeToUse) {
+      rows.push(tqFact('Time to use', esc(asset.timeToUse)));
+    }
+    if (asset.rating != null && !isNaN(Number(asset.rating))) {
+      rows.push(tqFact('Output quality', ratingDotsHtml(asset.rating)));
+    }
+
+    var limitationsRow = asset.limitations
+      ? '<div class="tq-fact tq-full"><span class="tq-label">Known limitations</span>' +
+        '<span class="tq-value">' + esc(asset.limitations) + '</span></div>'
+      : '';
+
+    if (!rows.length && !limitationsRow) return '';
+
+    return '<div class="asset-block"><h2>Trust &amp; Quality</h2>' +
+      '<div class="tq-grid">' + rows.join('') + limitationsRow + '</div></div>';
+  }
+
   function renderNotFound(root, breadcrumb) {
     if (breadcrumb) {
       breadcrumb.innerHTML =
@@ -160,6 +233,7 @@
         '<h1>' + esc(asset.title) + '</h1>' +
         '<p class="asset-tagline">' + esc(asset.desc) + '</p>' +
       '</div>' +
+      trustQualityHtml(asset) +
       block('What it is', asset.desc) +
       block("Who it's for", asset.forWho) +
       block('The problem it solves', asset.problem) +
@@ -168,14 +242,21 @@
       block('Setup & install', asset.setup) +
       codeBlock('Example', asset.example, false) +
       codeBlock('The asset', asset.content, true) +
+      block('Monetization & use-case notes', asset.monetization) +
       relatedHtml(asset, library) +
     '</div>';
+
+    var licenseLabel = asset.license ? (LICENSE_LABEL[asset.license] || null) : null;
+    var licenseRow = licenseLabel
+      ? '<li class="meta-item"><span class="meta-key">License</span><span class="meta-val">' + esc(licenseLabel) + '</span></li>'
+      : '';
 
     var sidebar = '<aside class="asset-sidebar">' +
       '<ul class="meta-list">' +
         '<li class="meta-item"><span class="meta-key">Type</span><span class="meta-val">' + esc(asset.typeLabel) + '</span></li>' +
         '<li class="meta-item"><span class="meta-key">Status</span><span class="meta-val">' + esc(statusLabel) + '</span></li>' +
         '<li class="meta-item"><span class="meta-key">Price</span><span class="meta-val">' + esc(priceLabel) + '</span></li>' +
+        licenseRow +
         '<li class="meta-item"><span class="meta-key">Difficulty</span><span class="meta-val">' + esc(asset.difficulty) + '</span></li>' +
         '<li class="meta-item"><span class="meta-key">Use case</span><span class="meta-val">' + esc(asset.useCase) + '</span></li>' +
         '<li class="meta-item"><span class="meta-key">Version</span><span class="meta-val">' + esc(asset.version) + '</span></li>' +

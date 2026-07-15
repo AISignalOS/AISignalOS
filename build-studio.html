@@ -10,6 +10,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="pages.css" />
+  <style>
+    .progress-bar {
+      width: 100%;
+      height: 4px;
+      background-color: var(--clr-border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background-color: var(--clr-accent);
+      transition: width 0.2s ease;
+    }
+    .checklist-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      padding: var(--space-md);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-sm);
+      margin-bottom: var(--space-sm);
+      background-color: var(--clr-bg-alt);
+    }
+    .checklist-checkbox {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      accent-color: var(--clr-accent);
+    }
+    .checklist-label {
+      flex: 1;
+      cursor: pointer;
+      user-select: none;
+      font-size: 0.95rem;
+    }
+    .checklist-item.completed .checklist-label {
+      text-decoration: line-through;
+      color: var(--clr-text-secondary);
+    }
+  </style>
 </head>
 <body>
   <canvas id="bg-canvas"></canvas>
@@ -49,6 +89,8 @@
           <button class="studio-tab active" data-tab="assets" role="tab">Saved Assets</button>
           <button class="studio-tab" data-tab="ideas" role="tab">Tool Ideas</button>
           <button class="studio-tab" data-tab="pipeline" role="tab">Pipeline</button>
+          <button class="studio-tab" data-tab="workflows" role="tab">Workflows</button>
+          <button class="studio-tab" data-tab="checklist" role="tab">Build Checklist</button>
         </div>
 
         <!-- Saved Assets -->
@@ -98,6 +140,37 @@
               <p class="path-desc">A tool that solves an expensive, repeated problem — packaged, priced, shipped.</p>
             </div>
           </div>
+        </div>
+
+        <!-- Workflows -->
+        <div class="studio-panel" data-panel="workflows">
+          <form class="form-card" id="workflow-form" style="max-width: 680px; margin-bottom: var(--space-2xl);">
+            <div class="form-field" style="margin-bottom: var(--space-md);">
+              <label for="workflow-title">Workflow title</label>
+              <input class="input" type="text" id="workflow-title" placeholder="e.g. Weekly blog post approval process" autocomplete="off" />
+            </div>
+            <div class="form-field" style="margin-bottom: var(--space-md);">
+              <label for="workflow-steps">Steps</label>
+              <textarea class="input" id="workflow-steps" placeholder="Describe the workflow steps..." style="resize: vertical; min-height: 100px;"></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Add workflow</button>
+          </form>
+          <div id="workflows-content"></div>
+        </div>
+
+        <!-- Build Checklist -->
+        <div class="studio-panel" data-panel="checklist">
+          <div style="margin-bottom: var(--space-2xl);">
+            <div style="display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-lg);">
+              <div style="flex: 1;">
+                <div style="font-size: 0.875rem; color: var(--clr-text-secondary); margin-bottom: var(--space-sm);" id="checklist-progress">0 of 8 complete</div>
+                <div class="progress-bar">
+                  <div class="progress-fill" id="checklist-fill" style="width: 0%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="checklist-content"></div>
         </div>
       </div>
     </section>
