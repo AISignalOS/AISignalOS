@@ -10,6 +10,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="pages.css" />
+  <style>
+    a.path-card { color: inherit; display: block; text-decoration: none; }
+    .path-browse-hint {
+      display: block;
+      margin-top: var(--space-md);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--clr-blue);
+    }
+    .path-card.color-purple .path-browse-hint { color: #a78bfa; }
+    .path-card.color-cyan .path-browse-hint { color: var(--clr-cyan); }
+    a.path-card:hover .path-browse-hint { text-decoration: underline; }
+  </style>
 </head>
 <body>
   <canvas id="bg-canvas"></canvas>
@@ -48,10 +61,19 @@
               <tr>
                 <th>Asset type</th>
                 <th>Claude</th>
+                <th>Claude Code</th>
                 <th>ChatGPT</th>
-                <th>Gemini</th>
                 <th>Codex</th>
+                <th>Gemini</th>
+                <th>Gemini CLI</th>
+                <th>Antigravity</th>
                 <th>Cursor</th>
+                <th>GitHub</th>
+                <th>Vercel</th>
+                <th>Notion</th>
+                <th>n8n</th>
+                <th>Zapier</th>
+                <th>Make</th>
               </tr>
             </thead>
             <tbody>
@@ -62,10 +84,62 @@
                 <td class="yes">✓</td>
                 <td class="yes">✓</td>
                 <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+              </tr>
+              <tr>
+                <td>Prompt Packs</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
               </tr>
               <tr>
                 <td>Skills</td>
                 <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+              </tr>
+              <tr>
+                <td>Plugins</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
                 <td class="no">–</td>
                 <td class="no">–</td>
                 <td class="no">–</td>
@@ -75,12 +149,149 @@
                 <td>MCP Servers</td>
                 <td class="yes">✓</td>
                 <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
                 <td class="no">–</td>
                 <td class="yes">✓</td>
                 <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
               </tr>
               <tr>
                 <td>CLIs</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+              </tr>
+              <tr>
+                <td>Hooks</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+              </tr>
+              <tr>
+                <td>Subagents</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+              </tr>
+              <tr>
+                <td>AGENTS.md</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+              </tr>
+              <tr>
+                <td>GEMINI.md</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+              </tr>
+              <tr>
+                <td>CLAUDE.md</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+              </tr>
+              <tr>
+                <td>Automations</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td>Templates</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
                 <td class="yes">✓</td>
                 <td class="yes">✓</td>
                 <td class="yes">✓</td>
@@ -88,12 +299,21 @@
                 <td class="yes">✓</td>
               </tr>
               <tr>
-                <td>Automations</td>
-                <td class="yes">✓</td>
-                <td class="yes">✓</td>
+                <td>Workflows</td>
+                <td class="no">–</td>
                 <td class="yes">✓</td>
                 <td class="no">–</td>
                 <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
               </tr>
             </tbody>
           </table>
@@ -112,19 +332,19 @@
         <div class="resource-section reveal-fade">
           <h2>Docs</h2>
           <div class="resource-list">
-            <a href="#" class="resource-link">
+            <a href="https://modelcontextprotocol.io/" class="resource-link" target="_blank" rel="noopener noreferrer">
               <span class="r-title">Official MCP Docs</span>
               <span class="r-desc">The Model Context Protocol spec, server SDKs, and reference servers.</span>
             </a>
-            <a href="#" class="resource-link">
+            <a href="https://code.claude.com/docs" class="resource-link" target="_blank" rel="noopener noreferrer">
               <span class="r-title">Claude Code Guide</span>
               <span class="r-desc">Setup, hooks, slash commands, and configuration for the Claude Code CLI.</span>
             </a>
-            <a href="#" class="resource-link">
+            <a href="https://docs.claude.com/en/api" class="resource-link" target="_blank" rel="noopener noreferrer">
               <span class="r-title">Claude API Reference</span>
               <span class="r-desc">Messages, tool use, streaming, and prompt caching for the Anthropic API.</span>
             </a>
-            <a href="#" class="resource-link">
+            <a href="https://code.claude.com/docs/en/skills" class="resource-link" target="_blank" rel="noopener noreferrer">
               <span class="r-title">Skills &amp; Plugins Docs</span>
               <span class="r-desc">How to structure a SKILL.md and bundle skills into distributable plugins.</span>
             </a>
@@ -134,21 +354,21 @@
         <div class="resource-section reveal-fade">
           <h2>Tutorials</h2>
           <div class="resource-list">
-            <a href="#" class="resource-link">
+            <a href="post.html?slug=mcp-server-setup-guide" class="resource-link">
               <span class="r-title">Build Your First MCP Server</span>
-              <span class="r-desc">A step-by-step walkthrough from empty folder to a working, connected server.</span>
+              <span class="r-desc">Set up, configure, and connect an MCP server to Claude — the gaps the official docs leave out.</span>
             </a>
-            <a href="#" class="resource-link">
+            <a href="post.html?slug=prompt-to-47-dollar-product" class="resource-link">
               <span class="r-title">Prompt-to-Product in a Weekend</span>
-              <span class="r-desc">Package a prompt you already use into something you can sell.</span>
+              <span class="r-desc">A real case study: packaging a prompt you already use into a priced, shippable product.</span>
             </a>
-            <a href="#" class="resource-link">
+            <a href="post.html?slug=tested-this-tool-n8n" class="resource-link">
               <span class="r-title">Automating with n8n</span>
-              <span class="r-desc">Wire up an AI-summarized daily digest with triggers and branching logic.</span>
+              <span class="r-desc">Thirty days of building AI automations in n8n — what worked, what broke, and whether it's worth it.</span>
             </a>
-            <a href="#" class="resource-link">
+            <a href="post.html?slug=claude-code-on-the-web" class="resource-link">
               <span class="r-title">Claude Code on the Web</span>
-              <span class="r-desc">Set up a repo with a SessionStart hook for cloud-based coding sessions.</span>
+              <span class="r-desc">Set up a repo, run sessions in the cloud, and ship changes through pull requests.</span>
             </a>
           </div>
         </div>
@@ -156,19 +376,19 @@
         <div class="resource-section reveal-fade">
           <h2>Tools</h2>
           <div class="resource-list">
-            <a href="#" class="resource-link">
+            <a href="https://n8n.io" class="resource-link" target="_blank" rel="noopener noreferrer">
               <span class="r-title">n8n</span>
               <span class="r-desc">Self-hostable automation with real branching logic and no per-task pricing.</span>
             </a>
-            <a href="#" class="resource-link">
+            <a href="https://www.notion.com" class="resource-link" target="_blank" rel="noopener noreferrer">
               <span class="r-title">Notion</span>
               <span class="r-desc">A flexible home for prompt databases, build trackers, and product pipelines.</span>
             </a>
-            <a href="#" class="resource-link">
+            <a href="https://cursor.com" class="resource-link" target="_blank" rel="noopener noreferrer">
               <span class="r-title">Cursor</span>
               <span class="r-desc">An AI-first code editor with strong MCP and agent support.</span>
             </a>
-            <a href="#" class="resource-link">
+            <a href="https://supabase.com" class="resource-link" target="_blank" rel="noopener noreferrer">
               <span class="r-title">Supabase</span>
               <span class="r-desc">Postgres, auth, and edge functions for backing your AI tools and products.</span>
             </a>
@@ -178,20 +398,20 @@
         <div class="resource-section reveal-fade">
           <h2>Communities</h2>
           <div class="resource-list">
-            <a href="#" class="resource-link">
-              <span class="r-title">AI Builders Discord</span>
-              <span class="r-desc">Share builds, ask for feedback, and trade prompts with other solopreneurs.</span>
+            <a href="https://discord.gg/anthropic" class="resource-link" target="_blank" rel="noopener noreferrer">
+              <span class="r-title">Anthropic Discord</span>
+              <span class="r-desc">The official Anthropic community — share builds, ask for feedback, and talk with other Claude builders.</span>
             </a>
-            <a href="#" class="resource-link">
-              <span class="r-title">MCP Server Authors</span>
+            <a href="https://github.com/modelcontextprotocol/modelcontextprotocol/discussions" class="resource-link" target="_blank" rel="noopener noreferrer">
+              <span class="r-title">MCP GitHub Discussions</span>
               <span class="r-desc">A focused group for people writing and maintaining MCP servers.</span>
             </a>
-            <a href="#" class="resource-link">
-              <span class="r-title">Indie AI Creators</span>
+            <a href="https://www.indiehackers.com" class="resource-link" target="_blank" rel="noopener noreferrer">
+              <span class="r-title">Indie Hackers</span>
               <span class="r-desc">Monetization, pricing, and launch tactics for one-person AI businesses.</span>
             </a>
-            <a href="#" class="resource-link">
-              <span class="r-title">Automation Subreddit</span>
+            <a href="https://www.reddit.com/r/automation/" class="resource-link" target="_blank" rel="noopener noreferrer">
+              <span class="r-title">r/automation</span>
               <span class="r-desc">Real-world workflow recipes and troubleshooting for no-code automations.</span>
             </a>
           </div>
@@ -230,6 +450,21 @@
           .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
       }
 
+      var pathLinks = {
+        'beginner': 'library.html?difficulty=beginner',
+        'prompt-to-product': 'library.html?usecase=monetization',
+        'skill-builder': 'library.html?type=skill',
+        'mcp-builder': 'library.html?type=mcp',
+        'monetization': 'library.html?usecase=monetization',
+        'automation': 'library.html?usecase=automation',
+        'content-engine': 'library.html?usecase=content',
+        'saat-builder': 'library.html?usecase=product%20building'
+      };
+
+      function pathHref(id) {
+        return pathLinks.hasOwnProperty(id) ? pathLinks[id] : 'library.html';
+      }
+
       if (!paths.length) {
         grid.innerHTML = '<div class="empty-state"><h3>No paths yet</h3><p>Check back soon.</p></div>';
         return;
@@ -239,13 +474,15 @@
         var colorClass = p.color === 'purple' ? ' color-purple'
           : p.color === 'cyan' ? ' color-cyan' : '';
         var steps = Number(p.steps) || 0;
+        var href = pathHref(p.id);
         return '' +
-          '<div class="path-card' + colorClass + ' reveal-card">' +
+          '<a href="' + esc(href) + '" class="path-card' + colorClass + ' reveal-card">' +
             '<div class="path-num">' + (i + 1) + '</div>' +
             '<h3 class="path-title">' + esc(p.title) + '</h3>' +
             '<p class="path-desc">' + esc(p.desc) + '</p>' +
             '<span class="path-steps">' + steps + ' step' + (steps === 1 ? '' : 's') + '</span>' +
-          '</div>';
+            '<span class="path-browse-hint">Browse assets →</span>' +
+          '</a>';
       }).join('');
 
       if (typeof AISO.observeReveals === 'function') AISO.observeReveals();
