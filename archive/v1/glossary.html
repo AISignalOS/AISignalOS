@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glossary — AISolutionsOS</title>
+  <meta name="description" content="A plain-English glossary of AI building terms — jargon decoded, no fluff." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div id="site-nav"></div>
+  <main>
+    <header class="page-hero" data-intro>
+      <div class="container">
+        <span class="page-eyebrow reveal-fade">Glossary</span>
+        <h1 class="page-title reveal-fade">Plain-English <span class="gradient-text">AI Glossary</span></h1>
+        <p class="page-lead reveal-fade">The jargon, decoded. Every term you keep running into, explained in plain language.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="toolbar">
+          <div class="search-box">
+            <span class="search-icon" id="glossary-search-icon"></span>
+            <input type="search" class="search-input" id="glossary-search"
+                   placeholder="Search terms…" aria-label="Search glossary terms" autocomplete="off" />
+          </div>
+        </div>
+        <div class="glossary-grid" id="glossary-grid"></div>
+        <div id="glossary-empty"></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="data.js"></script>
+  <script src="shared.js"></script>
+  <script src="glossary.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — AISolutionsOS</title>
+  <meta name="description" content="Free downloads and paid packs — prompt packs, skill packs, starter kits, and done-for-you services to help you ship AI systems faster." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div id="site-nav"></div>
+
+  <main>
+    <header class="page-hero" data-intro>
+      <div class="container">
+        <span class="page-eyebrow reveal-fade">Shop</span>
+        <h1 class="page-title reveal-fade">Products &amp; <span class="gradient-text">Packs</span></h1>
+        <p class="page-lead reveal-fade">Most of the library is free to download. These packs and services go further — curated, organized, and ready to ship. Pay once, own it forever.</p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="product-grid" id="product-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-tinted">
+      <div class="container">
+        <div class="cta-band reveal-fade">
+          <h2>Not sure where to start?</h2>
+          <p>Browse the free library first — copy what you need, then come back for the packs that save you the most time.</p>
+          <div class="hero-ctas">
+            <a href="library.html" class="btn-primary btn-lg">Browse the Library →</a>
+            <a href="submit.html" class="btn-outline btn-lg">Submit a Workflow</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart UI -->
+  <button class="cart-fab" id="cart-fab" aria-label="Open cart">
+    Cart
+    <span class="cart-count" id="cart-count">0</span>
+  </button>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart">
+    <div class="cart-head">
+      <h3>Your Cart</h3>
+      <button class="cart-close" id="cart-close" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-foot" id="cart-foot">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total">$0</span>
+      </div>
+      <button class="btn-primary btn-full" id="cart-checkout">Checkout</button>
+    </div>
+  </aside>
+
+  <div id="site-footer"></div>
+
+  <script src="data.js"></script>
+  <script src="shared.js"></script>
+  <script src="shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changelog — AISolutionsOS</title>
+  <meta name="description" content="The public build log of changes to AISolutionsOS — what shipped, what changed, and when." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div id="site-nav"></div>
+  <main>
+    <header class="page-hero" data-intro>
+      <div class="container">
+        <span class="page-eyebrow reveal-fade">Changelog</span>
+        <h1 class="page-title reveal-fade">What's <span class="gradient-text">Changed</span></h1>
+        <p class="page-lead reveal-fade">The public build log of every change we ship — features added, things updated, in the open.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="timeline" id="changelog-timeline"></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="data.js"></script>
+  <script src="shared.js"></script>
+  <script src="changelog.js"></script>
+</body>
+</html>

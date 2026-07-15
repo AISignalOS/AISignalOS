@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Builders — AISolutionsOS</title>
+  <meta name="description" content="Interactive builders that turn raw ideas into structured, sellable AI systems — packagers, generators, planners, and audit tools." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div id="site-nav"></div>
+  <main>
+    <section class="section">
+      <div class="container" data-intro>
+        <div class="page-hero">
+          <p class="page-eyebrow reveal-fade">Build Studio</p>
+          <h1 class="page-title reveal-fade">Interactive Builders</h1>
+          <p class="page-lead reveal-fade">Tools that turn raw ideas into structured AI systems — package a prompt into a product, generate an MCP spec, audit a build, and more. Pick a builder and start shipping.</p>
+        </div>
+
+        <div class="tool-cat-tabs reveal-fade" id="tool-cat-tabs">
+          <!-- category pills injected by tool.js -->
+        </div>
+
+        <div class="tools-grid" id="tools-grid">
+          <!-- tool cards injected by tool.js -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tinted">
+      <div class="container">
+        <div class="cta-band reveal-fade">
+          <h2>Need a head start?</h2>
+          <p>Browse the AI Library for tested prompts, skills, and MCP servers — or send us a workflow you want turned into a tool.</p>
+          <div class="hero-ctas">
+            <a href="library.html" class="btn-primary btn-lg">Explore the Library →</a>
+            <a href="submit.html" class="btn-outline btn-lg">Submit a Workflow</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="data.js"></script>
+  <script src="shared.js"></script>
+  <script src="tool.js"></script>
+</body>
+</html>
