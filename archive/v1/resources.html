@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources &amp; Learning — AISolutionsOS</title>
+  <meta name="description" content="Learning paths, a tool compatibility matrix, and a curated set of docs, tutorials, tools, and communities for building reusable AI systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div id="site-nav"></div>
+
+  <main>
+    <header class="page-hero" data-intro>
+      <div class="container">
+        <span class="page-eyebrow reveal-fade">Resources</span>
+        <h1 class="page-title reveal-fade">Resources &amp; <span class="gradient-text">Learning</span></h1>
+        <p class="page-lead reveal-fade">Guided paths to go from zero to shipping, a compatibility matrix for picking the right tool, and a hand-picked set of the docs and communities worth your time.</p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Learning Paths</span>
+          <h2 class="section-title">Pick a path and start</h2>
+          <p class="section-subtitle">Structured routes through the library — each one ends with a real, reusable asset you've built yourself.</p>
+        </div>
+        <div class="paths-grid" id="paths-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-tinted">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Compatibility</span>
+          <h2 class="section-title">Compatibility Matrix</h2>
+          <p class="section-subtitle">Which asset types work with which tools today. A rough guide, not a guarantee — always check the asset's own compatibility notes.</p>
+        </div>
+        <div class="matrix-wrap">
+          <table class="matrix">
+            <thead>
+              <tr>
+                <th>Asset type</th>
+                <th>Claude</th>
+                <th>ChatGPT</th>
+                <th>Gemini</th>
+                <th>Codex</th>
+                <th>Cursor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Prompts</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td>Skills</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+              </tr>
+              <tr>
+                <td>MCP Servers</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td>CLIs</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td>Automations</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+                <td class="no">–</td>
+                <td class="no">–</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Curated</span>
+          <h2 class="section-title">Curated Resources</h2>
+          <p class="section-subtitle">The handful of external references we actually keep coming back to.</p>
+        </div>
+
+        <div class="resource-section reveal-fade">
+          <h2>Docs</h2>
+          <div class="resource-list">
+            <a href="#" class="resource-link">
+              <span class="r-title">Official MCP Docs</span>
+              <span class="r-desc">The Model Context Protocol spec, server SDKs, and reference servers.</span>
+            </a>
+            <a href="#" class="resource-link">
+              <span class="r-title">Claude Code Guide</span>
+              <span class="r-desc">Setup, hooks, slash commands, and configuration for the Claude Code CLI.</span>
+            </a>
+            <a href="#" class="resource-link">
+              <span class="r-title">Claude API Reference</span>
+              <span class="r-desc">Messages, tool use, streaming, and prompt caching for the Anthropic API.</span>
+            </a>
+            <a href="#" class="resource-link">
+              <span class="r-title">Skills &amp; Plugins Docs</span>
+              <span class="r-desc">How to structure a SKILL.md and bundle skills into distributable plugins.</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="resource-section reveal-fade">
+          <h2>Tutorials</h2>
+          <div class="resource-list">
+            <a href="#" class="resource-link">
+              <span class="r-title">Build Your First MCP Server</span>
+              <span class="r-desc">A step-by-step walkthrough from empty folder to a working, connected server.</span>
+            </a>
+            <a href="#" class="resource-link">
+              <span class="r-title">Prompt-to-Product in a Weekend</span>
+              <span class="r-desc">Package a prompt you already use into something you can sell.</span>
+            </a>
+            <a href="#" class="resource-link">
+              <span class="r-title">Automating with n8n</span>
+              <span class="r-desc">Wire up an AI-summarized daily digest with triggers and branching logic.</span>
+            </a>
+            <a href="#" class="resource-link">
+              <span class="r-title">Claude Code on the Web</span>
+              <span class="r-desc">Set up a repo with a SessionStart hook for cloud-based coding sessions.</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="resource-section reveal-fade">
+          <h2>Tools</h2>
+          <div class="resource-list">
+            <a href="#" class="resource-link">
+              <span class="r-title">n8n</span>
+              <span class="r-desc">Self-hostable automation with real branching logic and no per-task pricing.</span>
+            </a>
+            <a href="#" class="resource-link">
+              <span class="r-title">Notion</span>
+              <span class="r-desc">A flexible home for prompt databases, build trackers, and product pipelines.</span>
+            </a>
+            <a href="#" class="resource-link">
+              <span class="r-title">Cursor</span>
+              <span class="r-desc">An AI-first code editor with strong MCP and agent support.</span>
+            </a>
+            <a href="#" class="resource-link">
+              <span class="r-title">Supabase</span>
+              <span class="r-desc">Postgres, auth, and edge functions for backing your AI tools and products.</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="resource-section reveal-fade">
+          <h2>Communities</h2>
+          <div class="resource-list">
+            <a href="#" class="resource-link">
+              <span class="r-title">AI Builders Discord</span>
+              <span class="r-desc">Share builds, ask for feedback, and trade prompts with other solopreneurs.</span>
+            </a>
+            <a href="#" class="resource-link">
+              <span class="r-title">MCP Server Authors</span>
+              <span class="r-desc">A focused group for people writing and maintaining MCP servers.</span>
+            </a>
+            <a href="#" class="resource-link">
+              <span class="r-title">Indie AI Creators</span>
+              <span class="r-desc">Monetization, pricing, and launch tactics for one-person AI businesses.</span>
+            </a>
+            <a href="#" class="resource-link">
+              <span class="r-title">Automation Subreddit</span>
+              <span class="r-desc">Real-world workflow recipes and troubleshooting for no-code automations.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tinted">
+      <div class="container">
+        <div class="cta-band reveal-fade">
+          <h2>Turn learning into assets</h2>
+          <p>Every path ends with something reusable. Browse the library to see finished examples, or send us a workflow to build from.</p>
+          <div class="hero-ctas">
+            <a href="library.html" class="btn-primary btn-lg">Browse the Library →</a>
+            <a href="submit.html" class="btn-outline btn-lg">Submit a Workflow</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="data.js"></script>
+  <script src="shared.js"></script>
+  <script>
+    (function () {
+      'use strict';
+      var AISO = window.AISO || {};
+      var paths = AISO.paths || [];
+      var grid = document.getElementById('paths-grid');
+      if (!grid) return;
+
+      function esc(s) {
+        return String(s == null ? '' : s)
+          .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      }
+
+      if (!paths.length) {
+        grid.innerHTML = '<div class="empty-state"><h3>No paths yet</h3><p>Check back soon.</p></div>';
+        return;
+      }
+
+      grid.innerHTML = paths.map(function (p, i) {
+        var colorClass = p.color === 'purple' ? ' color-purple'
+          : p.color === 'cyan' ? ' color-cyan' : '';
+        var steps = Number(p.steps) || 0;
+        return '' +
+          '<div class="path-card' + colorClass + ' reveal-card">' +
+            '<div class="path-num">' + (i + 1) + '</div>' +
+            '<h3 class="path-title">' + esc(p.title) + '</h3>' +
+            '<p class="path-desc">' + esc(p.desc) + '</p>' +
+            '<span class="path-steps">' + steps + ' step' + (steps === 1 ? '' : 's') + '</span>' +
+          '</div>';
+      }).join('');
+
+      if (typeof AISO.observeReveals === 'function') AISO.observeReveals();
+    })();
+  </script>
+</body>
+</html>

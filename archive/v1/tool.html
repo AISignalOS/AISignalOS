@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tool — AISolutionsOS</title>
+  <meta name="description" content="An interactive AISolutionsOS builder — package prompts, generate MCP specs, and audit your AI builds, all client-side in the browser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div id="site-nav"></div>
+  <main>
+    <section class="section">
+      <div class="container" data-intro>
+        <nav class="breadcrumb reveal-fade" id="tool-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <a href="tools.html">Tools</a>
+        </nav>
+
+        <div class="page-hero" style="text-align:left; margin-bottom: var(--space-2xl);">
+          <p class="page-eyebrow reveal-fade" id="tool-eyebrow">Interactive Builder</p>
+          <h1 class="page-title reveal-fade" id="tool-title">Builder</h1>
+          <p class="page-lead reveal-fade" id="tool-lead" style="margin-inline:0;"></p>
+        </div>
+
+        <div id="tool-root" class="reveal-fade"></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="data.js"></script>
+  <script src="shared.js"></script>
+  <script src="tool.js"></script>
+</body>
+</html>

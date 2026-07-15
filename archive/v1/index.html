@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AISolutionsOS — The Operating System for AI-Powered Solopreneurs</title>
+  <meta name="description" content="Build prompts into products, workflows into assets, and chaos into clarity. AISolutionsOS is the operating system for AI-powered solopreneurs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+
+  <!-- Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation (injected by shared.js) -->
+  <div id="site-nav"></div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-content" data-intro>
+      <div class="hero-badge reveal-fade">
+        <span class="badge-dot"></span>
+        Now live — AI Asset Library v0.1
+      </div>
+      <h1 class="hero-headline reveal-fade">
+        Turn AI chaos into<br/><span class="gradient-text">reusable systems.</span>
+      </h1>
+      <p class="hero-subheadline reveal-fade">
+        AISolutionsOS is the operating system for AI-powered solopreneurs.<br class="break-lg"/>
+        Build prompts into products, workflows into assets, and chaos into clarity.
+      </p>
+      <div class="hero-ctas reveal-fade">
+        <a href="library.html" class="btn-primary btn-lg">Explore the Library →</a>
+        <a href="tools.html" class="btn-outline btn-lg">Browse Tools →</a>
+      </div>
+      <div class="hero-stats reveal-fade">
+        <div class="stat">
+          <span class="stat-num">8+</span>
+          <span class="stat-label">AI Tools</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">50+</span>
+          <span class="stat-label">Library Assets</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label">Pipeline Steps</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to explore</span>
+      <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+        <path d="M8 1v14M2 9l6 6 6-6" stroke="#4f8ef7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Pipeline Section -->
+  <section id="pipeline" class="pipeline-section">
+    <div class="container">
+      <div class="section-header reveal-fade">
+        <h2 class="section-title">The AISolutionsOS Pipeline</h2>
+        <p class="section-subtitle">Every AI system follows the same five steps. We built tools for each one.</p>
+      </div>
+
+      <div class="pipeline-track">
+        <div class="pipeline-step" data-step="0">
+          <div class="step-card">
+            <div class="step-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <rect x="4" y="8" width="24" height="16" rx="3" stroke="#4f8ef7" stroke-width="1.5"/>
+                <line x1="9" y1="13" x2="23" y2="13" stroke="#4f8ef7" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="9" y1="17" x2="18" y2="17" stroke="#4f8ef7" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+                <circle cx="25" cy="9" r="3" fill="#8b5cf6"/>
+              </svg>
+            </div>
+            <span class="step-number">01</span>
+            <h3 class="step-label">Input</h3>
+            <p class="step-desc">Raw prompts, workflows, and chaos</p>
+          </div>
+        </div>
+
+        <div class="pipeline-arrow" data-arrow="0">
+          <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
+            <path d="M2 10h32" stroke="url(#arrowGrad0)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M28 4l8 6-8 6" stroke="url(#arrowGrad0)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="arrowGrad0" x1="0" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#4f8ef7"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="pipeline-step" data-step="1">
+          <div class="step-card">
+            <div class="step-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <rect x="6" y="6" width="20" height="20" rx="2" stroke="#8b5cf6" stroke-width="1.5"/>
+                <rect x="10" y="10" width="5" height="5" rx="1" fill="#8b5cf6" opacity="0.6"/>
+                <rect x="17" y="10" width="5" height="5" rx="1" fill="#8b5cf6" opacity="0.6"/>
+                <rect x="10" y="17" width="5" height="5" rx="1" fill="#8b5cf6" opacity="0.6"/>
+                <rect x="17" y="17" width="5" height="5" rx="1" fill="#8b5cf6"/>
+              </svg>
+            </div>
+            <span class="step-number">02</span>
+            <h3 class="step-label">System</h3>
+            <p class="step-desc">Structured frameworks and architecture</p>
+          </div>
+        </div>
+
+        <div class="pipeline-arrow" data-arrow="1">
+          <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
+            <path d="M2 10h32" stroke="url(#arrowGrad1)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M28 4l8 6-8 6" stroke="url(#arrowGrad1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="arrowGrad1" x1="0" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#8b5cf6"/>
+                <stop offset="1" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="pipeline-step" data-step="2">
+          <div class="step-card">
+            <div class="step-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M16 4L28 10V22L16 28L4 22V10L16 4Z" stroke="#06b6d4" stroke-width="1.5"/>
+                <path d="M16 4V28M4 10L28 22M28 10L4 22" stroke="#06b6d4" stroke-width="1" opacity="0.4"/>
+              </svg>
+            </div>
+            <span class="step-number">03</span>
+            <h3 class="step-label">Asset</h3>
+            <p class="step-desc">Reusable, remixable building blocks</p>
+          </div>
+        </div>
+
+        <div class="pipeline-arrow" data-arrow="2">
+          <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
+            <path d="M2 10h32" stroke="url(#arrowGrad2)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M28 4l8 6-8 6" stroke="url(#arrowGrad2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="arrowGrad2" x1="0" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#06b6d4"/>
+                <stop offset="1" stop-color="#4f8ef7"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="pipeline-step" data-step="3">
+          <div class="step-card">
+            <div class="step-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M8 6h16l2 4H6L8 6Z" stroke="#4f8ef7" stroke-width="1.5" stroke-linejoin="round"/>
+                <rect x="6" y="10" width="20" height="16" rx="2" stroke="#4f8ef7" stroke-width="1.5"/>
+                <path d="M13 17l2 2 4-4" stroke="#4f8ef7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="step-number">04</span>
+            <h3 class="step-label">Tool</h3>
+            <p class="step-desc">Interactive builders and generators</p>
+          </div>
+        </div>
+
+        <div class="pipeline-arrow" data-arrow="3">
+          <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
+            <path d="M2 10h32" stroke="url(#arrowGrad3)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M28 4l8 6-8 6" stroke="url(#arrowGrad3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="arrowGrad3" x1="0" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#4f8ef7"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="pipeline-step" data-step="4">
+          <div class="step-card">
+            <div class="step-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M16 4l3 8h8l-6.5 5 2.5 8L16 20l-7 5 2.5-8L5 12h8L16 4Z" fill="#8b5cf6" fill-opacity="0.3" stroke="#8b5cf6" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="step-number">05</span>
+            <h3 class="step-label">Product</h3>
+            <p class="step-desc">Shippable, sellable solutions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section id="tools" class="tools-section">
+    <div class="container">
+      <div class="section-header reveal-fade">
+        <span class="section-eyebrow">Build Studio</span>
+        <h2 class="section-title">Interactive Builders</h2>
+        <p class="section-subtitle">Tools that turn your ideas into structured AI systems</p>
+      </div>
+
+      <div class="tools-grid">
+
+        <div class="tool-card reveal-card">
+          <div class="tool-card-inner">
+            <div class="tool-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="3" stroke="#4f8ef7" stroke-width="1.5"/>
+                <path d="M7 8h10M7 12h7M7 16h4" stroke="#4f8ef7" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="19" cy="5" r="3" fill="#8b5cf6"/>
+              </svg>
+            </div>
+            <div class="tool-badge badge-coming">Coming Soon</div>
+            <h3 class="tool-title">Prompt-to-Product Packager</h3>
+            <p class="tool-desc">Package any prompt into a sellable product with structured metadata and pricing.</p>
+          </div>
+          <div class="tool-glow"></div>
+        </div>
+
+        <div class="tool-card reveal-card">
+          <div class="tool-card-inner">
+            <div class="tool-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L2 7l10 5 10-5-10-5Z" stroke="#8b5cf6" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#8b5cf6" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="tool-badge badge-coming">Coming Soon</div>
+            <h3 class="tool-title">Workflow-to-Skill Builder</h3>
+            <p class="tool-desc">Convert your workflows into reusable Claude skills with proper formatting.</p>
+          </div>
+          <div class="tool-glow"></div>
+        </div>
+
+        <div class="tool-card reveal-card">
+          <div class="tool-card-inner">
+            <div class="tool-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="3" fill="#06b6d4" fill-opacity="0.3" stroke="#06b6d4" stroke-width="1.5"/>
+                <circle cx="4" cy="4" r="2" stroke="#06b6d4" stroke-width="1.5"/>
+                <circle cx="20" cy="4" r="2" stroke="#06b6d4" stroke-width="1.5"/>
+                <circle cx="4" cy="20" r="2" stroke="#06b6d4" stroke-width="1.5"/>
+                <circle cx="20" cy="20" r="2" stroke="#06b6d4" stroke-width="1.5"/>
+                <line x1="6" y1="6" x2="10" y2="10" stroke="#06b6d4" stroke-width="1" opacity="0.6"/>
+                <line x1="18" y1="6" x2="14" y2="10" stroke="#06b6d4" stroke-width="1" opacity="0.6"/>
+                <line x1="6" y1="18" x2="10" y2="14" stroke="#06b6d4" stroke-width="1" opacity="0.6"/>
+                <line x1="18" y1="18" x2="14" y2="14" stroke="#06b6d4" stroke-width="1" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="tool-badge badge-coming">Coming Soon</div>
+            <h3 class="tool-title">MCP Spec Generator</h3>
+            <p class="tool-desc">Generate complete MCP server specs from a plain-language description.</p>
+          </div>
+          <div class="tool-glow"></div>
+        </div>
+
+        <div class="tool-card reveal-card">
+          <div class="tool-card-inner">
+            <div class="tool-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="2" stroke="#4f8ef7" stroke-width="1.5"/>
+                <path d="M7 8l3 4-3 4M13 16h4" stroke="#4f8ef7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="tool-badge badge-coming">Coming Soon</div>
+            <h3 class="tool-title">CLI Scaffold Studio</h3>
+            <p class="tool-desc">Scaffold production-ready CLI tools from natural language descriptions.</p>
+          </div>
+          <div class="tool-glow"></div>
+        </div>
+
+        <div class="tool-card reveal-card">
+          <div class="tool-card-inner">
+            <div class="tool-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M3 6h18M3 12h18M3 18h18" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                <rect x="6" y="4" width="4" height="4" rx="1" fill="#8b5cf6"/>
+                <rect x="10" y="10" width="4" height="4" rx="1" fill="#8b5cf6" opacity="0.7"/>
+                <rect x="14" y="16" width="4" height="4" rx="1" fill="#8b5cf6" opacity="0.5"/>
+              </svg>
+            </div>
+            <div class="tool-badge badge-coming">Coming Soon</div>
+            <h3 class="tool-title">Automation Planner</h3>
+            <p class="tool-desc">Plan and visualize n8n/Zapier automations with AI-generated logic flows.</p>
+          </div>
+          <div class="tool-glow"></div>
+        </div>
+
+        <div class="tool-card reveal-card">
+          <div class="tool-card-inner">
+            <div class="tool-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="9" stroke="#06b6d4" stroke-width="1.5"/>
+                <path d="M9 12l2 2 4-4" stroke="#06b6d4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 3v2M12 19v2M3 12h2M19 12h2" stroke="#06b6d4" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+              </svg>
+            </div>
+            <div class="tool-badge badge-coming">Coming Soon</div>
+            <h3 class="tool-title">Build Audit Checker</h3>
+            <p class="tool-desc">Audit your AI builds for gaps, missing components, and improvement areas.</p>
+          </div>
+          <div class="tool-glow"></div>
+        </div>
+
+        <div class="tool-card reveal-card">
+          <div class="tool-card-inner">
+            <div class="tool-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L4 6v6c0 5 3.5 9.7 8 11 4.5-1.3 8-6 8-11V6L12 2Z" stroke="#4f8ef7" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M9 12l2 2 4-4" stroke="#4f8ef7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="tool-badge badge-coming">Coming Soon</div>
+            <h3 class="tool-title">Agent Pack Generator</h3>
+            <p class="tool-desc">Bundle multiple agents into structured, deployable agent packs.</p>
+          </div>
+          <div class="tool-glow"></div>
+        </div>
+
+        <div class="tool-card reveal-card">
+          <div class="tool-card-inner">
+            <div class="tool-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="8" height="8" rx="1.5" stroke="#8b5cf6" stroke-width="1.5"/>
+                <rect x="13" y="3" width="8" height="8" rx="1.5" stroke="#8b5cf6" stroke-width="1.5" opacity="0.6"/>
+                <rect x="3" y="13" width="8" height="8" rx="1.5" stroke="#8b5cf6" stroke-width="1.5" opacity="0.6"/>
+                <rect x="13" y="13" width="8" height="8" rx="1.5" stroke="#8b5cf6" stroke-width="1.5" opacity="0.4"/>
+                <path d="M7 7l5 5" stroke="#8b5cf6" stroke-width="1" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="tool-badge badge-coming">Coming Soon</div>
+            <h3 class="tool-title">Content Repurposing Console</h3>
+            <p class="tool-desc">Turn one piece of content into multiple formats and distribution assets.</p>
+          </div>
+          <div class="tool-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Library Section -->
+  <section id="library" class="library-section">
+    <div class="container">
+      <div class="section-header reveal-fade">
+        <span class="section-eyebrow">AI Asset Library</span>
+        <h2 class="section-title">The AI Asset Library</h2>
+        <p class="section-subtitle">A searchable catalog of prompts, skills, MCPs, CLIs, automations, and more</p>
+      </div>
+
+      <div class="library-filters reveal-fade">
+        <button class="filter-pill active" data-filter="all">All</button>
+        <button class="filter-pill" data-filter="prompt">Prompts</button>
+        <button class="filter-pill" data-filter="mcp">MCP Servers</button>
+        <button class="filter-pill" data-filter="skill">Skills</button>
+        <button class="filter-pill" data-filter="cli">CLIs</button>
+        <button class="filter-pill" data-filter="automation">Automations</button>
+        <button class="filter-pill" data-filter="template">Templates</button>
+        <button class="filter-pill" data-filter="checklist">Checklists</button>
+      </div>
+
+      <div class="library-grid" id="library-grid">
+
+        <div class="library-card reveal-card" data-category="prompt">
+          <div class="lib-type-badge badge-prompt">Prompt</div>
+          <h3 class="lib-title">Claude Code System Prompt</h3>
+          <p class="lib-desc">A battle-tested system prompt for running Claude Code on complex multi-file projects.</p>
+          <div class="lib-footer">
+            <div class="lib-compat">
+              <span class="compat-icon compat-claude" title="Claude">C</span>
+            </div>
+            <div class="lib-status badge-tested">Tested</div>
+          </div>
+        </div>
+
+        <div class="library-card reveal-card" data-category="mcp">
+          <div class="lib-type-badge badge-mcp">MCP Server</div>
+          <h3 class="lib-title">GitHub MCP Server</h3>
+          <p class="lib-desc">Full GitHub integration via MCP — repos, PRs, issues, and file operations.</p>
+          <div class="lib-footer">
+            <div class="lib-compat">
+              <span class="compat-icon compat-claude" title="Claude">C</span>
+            </div>
+            <div class="lib-status badge-tested">Tested</div>
+          </div>
+        </div>
+
+        <div class="library-card reveal-card" data-category="skill">
+          <div class="lib-type-badge badge-skill">Skill</div>
+          <h3 class="lib-title">Workflow-to-Skill Converter</h3>
+          <p class="lib-desc">Convert any documented workflow into a properly structured Claude skill file.</p>
+          <div class="lib-footer">
+            <div class="lib-compat">
+              <span class="compat-icon compat-claude" title="Claude">C</span>
+            </div>
+            <div class="lib-status badge-draft">Draft</div>
+          </div>
+        </div>
+
+        <div class="library-card reveal-card" data-category="checklist">
+          <div class="lib-type-badge badge-checklist">Checklist</div>
+          <h3 class="lib-title">AI Build Audit Checklist</h3>
+          <p class="lib-desc">A comprehensive checklist to audit any AI build for gaps and missing pieces.</p>
+          <div class="lib-footer">
+            <div class="lib-compat">
+              <span class="compat-icon compat-claude" title="Claude">C</span>
+              <span class="compat-icon compat-gpt" title="GPT">G</span>
+            </div>
+            <div class="lib-status badge-tested">Tested</div>
+          </div>
+        </div>
+
+        <div class="library-card reveal-card" data-category="template">
+          <div class="lib-type-badge badge-template">Template</div>
+          <h3 class="lib-title">Prompt-to-Product SOP</h3>
+          <p class="lib-desc">Step-by-step SOP for packaging a raw prompt into a productized, sellable asset.</p>
+          <div class="lib-footer">
+            <div class="lib-compat">
+              <span class="compat-icon compat-claude" title="Claude">C</span>
+              <span class="compat-icon compat-gpt" title="GPT">G</span>
+              <span class="compat-icon compat-gemini" title="Gemini">Gm</span>
+            </div>
+            <div class="lib-status badge-tested">Tested</div>
+          </div>
+        </div>
+
+        <div class="library-card reveal-card" data-category="template">
+          <div class="lib-type-badge badge-template">Template</div>
+          <h3 class="lib-title">Agent Pack Starter Kit</h3>
+          <p class="lib-desc">A starter template for bundling multiple AI agents into a deployable agent pack.</p>
+          <div class="lib-footer">
+            <div class="lib-compat">
+              <span class="compat-icon compat-claude" title="Claude">C</span>
+            </div>
+            <div class="lib-status badge-draft">Draft</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-cta reveal-fade">
+        <a href="library.html" class="btn-outline btn-lg">Browse Full Library →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="blog-section">
+    <div class="container">
+      <div class="section-header reveal-fade">
+        <span class="section-eyebrow">Build Log</span>
+        <h2 class="section-title">Build Log</h2>
+        <p class="section-subtitle">Tutorials, teardowns, and case studies from the build</p>
+      </div>
+
+      <div class="blog-grid">
+
+        <article class="blog-card reveal-card">
+          <div class="blog-card-inner">
+            <div class="blog-tag tag-build-log">Build Log</div>
+            <h3 class="blog-title">How I Packaged a Prompt into a $47 Product in 48 Hours</h3>
+            <p class="blog-excerpt">A real-time case study walking through every step of turning a raw prompt into a productized, shippable asset with pricing, copy, and delivery.</p>
+            <div class="blog-footer">
+              <span class="blog-date">Jun 2026</span>
+              <a href="post.html?slug=prompt-to-47-dollar-product" class="blog-read-link">Read →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card reveal-card">
+          <div class="blog-card-inner">
+            <div class="blog-tag tag-tutorial">Tutorial</div>
+            <h3 class="blog-title">The MCP Server Setup Guide Nobody Wrote</h3>
+            <p class="blog-excerpt">Everything you need to know to set up, configure, and connect an MCP server to Claude — without the gaps the official docs leave behind.</p>
+            <div class="blog-footer">
+              <span class="blog-date">Jun 2026</span>
+              <a href="post.html?slug=mcp-server-setup-guide" class="blog-read-link">Read →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card reveal-card">
+          <div class="blog-card-inner">
+            <div class="blog-tag tag-deep-dive">Deep Dive</div>
+            <h3 class="blog-title">Claude Skills vs Plugins: A Practical Breakdown</h3>
+            <p class="blog-excerpt">An honest comparison of Claude skills and plugins — what they do, where they overlap, and when to use each one in your AI system stack.</p>
+            <div class="blog-footer">
+              <span class="blog-date">Jun 2026</span>
+              <a href="post.html?slug=claude-skills-vs-plugins" class="blog-read-link">Read →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <div class="section-cta reveal-fade" style="margin-top: var(--space-2xl);">
+        <a href="blog.html" class="btn-outline btn-lg">Read the Build Log →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section id="roadmap" class="roadmap-section">
+    <div class="container">
+      <div class="section-header reveal-fade">
+        <span class="section-eyebrow">Roadmap</span>
+        <h2 class="section-title">What's Coming</h2>
+        <p class="section-subtitle">The build is public. Here's what's next.</p>
+      </div>
+
+      <div class="roadmap-grid">
+
+        <div class="roadmap-col reveal-card">
+          <div class="roadmap-col-header shipped">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7" fill="#22c55e" fill-opacity="0.2" stroke="#22c55e" stroke-width="1.5"/>
+              <path d="M5 8l2 2 4-4" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Shipped
+          </div>
+          <ul class="roadmap-list">
+            <li class="roadmap-item">
+              <span class="roadmap-dot dot-shipped"></span>
+              Landing Page
+            </li>
+            <li class="roadmap-item">
+              <span class="roadmap-dot dot-shipped"></span>
+              Tool Previews
+            </li>
+            <li class="roadmap-item">
+              <span class="roadmap-dot dot-shipped"></span>
+              Library Structure
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-col reveal-card">
+          <div class="roadmap-col-header building">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7" fill="#4f8ef7" fill-opacity="0.2" stroke="#4f8ef7" stroke-width="1.5"/>
+              <path d="M8 5v3l2 2" stroke="#4f8ef7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Building
+          </div>
+          <ul class="roadmap-list">
+            <li class="roadmap-item">
+              <span class="roadmap-dot dot-building"></span>
+              Search + Filters
+            </li>
+            <li class="roadmap-item">
+              <span class="roadmap-dot dot-building"></span>
+              Asset Detail Pages
+            </li>
+            <li class="roadmap-item">
+              <span class="roadmap-dot dot-building"></span>
+              Learning Paths
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-col reveal-card">
+          <div class="roadmap-col-header planned">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7" fill="#8b5cf6" fill-opacity="0.2" stroke="#8b5cf6" stroke-width="1.5"/>
+              <path d="M8 5v1M8 10v1" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="8" cy="8" r="1" fill="#8b5cf6"/>
+            </svg>
+            Planned
+          </div>
+          <ul class="roadmap-list">
+            <li class="roadmap-item">
+              <span class="roadmap-dot dot-planned"></span>
+              Build Studio Dashboard
+            </li>
+            <li class="roadmap-item">
+              <span class="roadmap-dot dot-planned"></span>
+              Shop / Products
+            </li>
+            <li class="roadmap-item">
+              <span class="roadmap-dot dot-planned"></span>
+              Compatibility Matrix
+            </li>
+            <li class="roadmap-item">
+              <span class="roadmap-dot dot-planned"></span>
+              Glossary
+            </li>
+            <li class="roadmap-item">
+              <span class="roadmap-dot dot-planned"></span>
+              Submit a Workflow
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (injected by shared.js) -->
+  <div id="site-footer"></div>
+
+  <script src="data.js"></script>
+  <script src="shared.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
