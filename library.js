@@ -238,6 +238,58 @@
       });
     }
 
+    // Parse URL parameters and apply filters before initial render
+    var getParam = function(name) {
+      try {
+        return new URLSearchParams(window.location.search).get(name);
+      } catch (e) {
+        var m = window.location.search.match(new RegExp('[?&]' + name + '=([^&]*)'));
+        return m ? decodeURIComponent(m[1].replace(/\+/g, ' ')) : null;
+      }
+    };
+
+    // Apply filter parameters from URL query string
+    Object.keys(filters).forEach(function (key) {
+      var paramValue = getParam(key);
+      if (paramValue && paramValue.trim()) {
+        var group = null;
+        // Find the group with matching data-filter-group attribute
+        Array.prototype.forEach.call(groups, function (g) {
+          if (g.getAttribute('data-filter-group') === key) {
+            group = g;
+          }
+        });
+        if (group) {
+          var pills = group.querySelectorAll('.filter-pill');
+          var matchingPill = null;
+          // Find pill with matching data-value (case-insensitive)
+          Array.prototype.forEach.call(pills, function (pill) {
+            if (pill.getAttribute('data-value').toLowerCase() === paramValue.toLowerCase()) {
+              matchingPill = pill;
+            }
+          });
+          if (matchingPill) {
+            // Remove active from all pills, add to matching pill
+            Array.prototype.forEach.call(pills, function (p) { p.classList.remove('active'); });
+            matchingPill.classList.add('active');
+            filters[key] = paramValue;
+          } else {
+            // No matching pill; reset to 'all'
+            filters[key] = 'all';
+            Array.prototype.forEach.call(pills, function (p) {
+              p.classList.toggle('active', p.getAttribute('data-value') === 'all');
+            });
+          }
+        }
+      }
+    });
+
+    // Apply ?q= parameter for search
+    var qParam = getParam('q');
+    if (qParam && searchEl) {
+      searchEl.value = qParam;
+    }
+
     apply();
   }
 
