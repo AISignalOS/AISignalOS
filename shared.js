@@ -93,7 +93,7 @@
             '<p class="footer-tagline">Build smarter. Ship faster. Own your systems.</p>' +
             '<div class="footer-social">' +
               '<a href="#" class="social-link" aria-label="X / Twitter">' + ICONS.x + '</a>' +
-              '<a href="#" class="social-link" aria-label="GitHub">' + ICONS.github + '</a>' +
+              '<a href="https://github.com/AISignalOS" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">' + ICONS.github + '</a>' +
               '<a href="#" class="social-link" aria-label="YouTube">' + ICONS.youtube + '</a>' +
             '</div>' +
           '</div>' +
