@@ -24,7 +24,7 @@
       tagline: 'Convert workflows into Claude skills',
       desc: 'Convert your workflows into reusable Claude skills with proper SKILL.md formatting and frontmatter.',
       icon: 'layers',
-      status: 'soon',
+      status: 'live',
       category: 'Build',
       tags: ['coding', 'automation'],
     },
